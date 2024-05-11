@@ -18,13 +18,15 @@
   </style>
 </head>
 <body>
-<form action="" method="post" enctype="multipart/form-data">
-  <label for="name"> Titulo </label>
-  <input type="text" name="name">
+<form action="insertar_contenido.php" method="post" enctype="multipart/form-data">
+  <label for="titulo"> Titulo </label>
+  <input type="text" name="titulo">
   <label for="comentario"> Comentario </label>
   <textarea name="comentario" cols="15" row="10"></textarea>
+  <!-- MAX_TAM es limite que permitido que controlamos en este caso 2Mb -->
+  <input type="hidden" name="MAX_TAM" values="2097152">
   <label for="Selecione una imagen con tamaño inferior a 2 Mb"></label>
-  <input type="file" >
+  <input type="file" name="img">
   <input type="submit" value="Enviar">
   <div> <a href="blog.php"> Pagina de vizualizacion del blog </a></div>
 </form>
